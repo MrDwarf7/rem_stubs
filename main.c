@@ -19,8 +19,6 @@ static int dir_is_empty(const wchar_t *dir) {
         return RETURN_ERROR;
     };
 
-    // swprintf(pattern, MAX_PATH, L"%s\\*", dir);
-
     WIN32_FIND_DATAW file_desc;
     HANDLE f_handle = FindFirstFileW(pattern, &file_desc);
 

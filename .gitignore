@@ -11,3 +11,11 @@ build/*
 tests_scenario
 tests_scenario/
 tests_scenario/*
+
+cmake-build-release
+cmake-build-debug
+
+cmake-build-release/
+cmake-build-debug/
+
+cmake-build-*
