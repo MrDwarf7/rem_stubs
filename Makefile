@@ -51,6 +51,10 @@ install: $(TARGET)
 	$(Q)if not exist $(subst /,\,$(INSTALL_DIR)) mkdir $(subst /,\,$(INSTALL_DIR))
 	$(Q)copy $(subst /,\,$(TARGET)) $(subst /,\,$(INSTALL_DIR))
 
+check:
+	$(Q)echo "Running cppcheck on $(SOURCES)"
+	$(Q)cppcheck --enable=all --suppress=missingIncludeSystem --force --inconclusive --std=c99 $(SOURCES)
+
 clean:
 	$(Q)echo "Cleaning..."
 	$(Q)if exist $(subst /,\,$(BUILD_DIR)) rmdir /S /Q $(subst /,\,$(BUILD_DIR))
