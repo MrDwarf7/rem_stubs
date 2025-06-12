@@ -1,0 +1,13 @@
+.git
+
+.idea
+.idea/
+.idea/*
+
+build
+build/
+build/*
+
+tests_scenario
+tests_scenario/
+tests_scenario/*
