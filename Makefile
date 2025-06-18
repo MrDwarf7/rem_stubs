@@ -51,6 +51,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.$(EXT) | $(OBJ_DIR)
 $(BUILD_DIR) $(OBJ_DIR):
 	$(Q)mkdir $(subst /,\,$@)
 
+release:
+	$(MAKE) BUILD_TYPE=release
+
+debug: 
+	$(MAKE) BUILD_TYPE=debug V=1
+
 install: $(TARGET)
 	$(Q)echo "Installing $(TARGET) to $(INSTALL_DIR)"
 	$(Q)if not exist $(subst /,\,$(INSTALL_DIR)) mkdir $(subst /,\,$(INSTALL_DIR))
